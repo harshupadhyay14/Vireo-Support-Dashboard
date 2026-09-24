@@ -53,9 +53,9 @@ A text "anger" score: it did not predict CSAT, so I dropped it.
 Per-ticket model calls: rejected because Finance ruled them out.
 The first lot join, which missed about 8% of tickets: replaced.
 
-Screen recording: [Drive link]
+Screen recording: [https://www.loom.com/share/2e0891713b3445928e2cb115a02986ad]
 
-**9. Public Google Drive link:** [ADD]
+**9. Public Google Drive link:** [https://www.loom.com/share/2e0891713b3445928e2cb115a02986ad]
 
 **10. Someone picks this up on Monday and you are unreachable: the three things they need to know.**
 1) `python run.py` rebuilds everything from five CSVs in `data/`; `tests/` must pass. 2) The message to Priya is "the bottom ten are a queue effect from Pulse 2 lots 2510-2512, don't retrain yet"; the supporting table is `out/lot_alerts.csv`. 3) Open items: a supplier claim needs Finance's real replacement counts, and the free-text rule needs a proper human-labelled sample.
