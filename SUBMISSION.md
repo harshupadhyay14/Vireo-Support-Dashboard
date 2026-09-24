@@ -32,13 +32,34 @@ SLA breach credits (1,064 breaches x Rs 350 = Rs 3.7 lakh over 18 months) and tr
 The faulty-lot detector and the finding itself. Also: the bot's category tag catches only 28% of the faulty-lot tickets as "Charging & Battery"; the free-text rule finds more.
 
 **8. What did you use AI for?**
-[FILL IN: tools, models, cost in Rs, what you discarded.] Suggested: Claude did exploration, code, the memo and this form; I reviewed and ran everything. Wasted time: first-pass ranking by raw CSAT and a text "anger" score (it did not predict CSAT, discarded). Screen recording link: [ADD].
+I used Claude as a analysis assistant. I set the direction . Cost: [Rs 0 / your plan price]. The tool itself makes no AI or API calls.
+
+What I did:
+
+Read the brief and email thread and decided to treat "bottom ten" as a question to test, not an answer to deliver.
+Set up the repo, ran the pipeline and tests locally, fixed my environment, and pushed to GitHub.
+Reviewed the outputs and the memo before submitting. [Add what you actually checked, e.g. spot-checked the 37% replacement rate against the raw CSV.]
+Decided what to leave out (SLA credits, transfer costs, repeat contacts) because of the 5-hour cap.
+
+Where Claude helped:
+
+Exploratory analysis, including the legacy timestamp bug and the Pulse 2 lot pattern.
+Labelling the 60-ticket sample for the text rule. These are model labels, not an independent human's.
+
+Where it wasted time or I discarded it:
+
+Ranking by raw CSAT: discarded as the headline.
+A text "anger" score: it did not predict CSAT, so I dropped it.
+Per-ticket model calls: rejected because Finance ruled them out.
+The first lot join, which missed about 8% of tickets: replaced.
+
+Screen recording: [Drive link]
 
 **9. Public Google Drive link:** [ADD]
 
 **10. Someone picks this up on Monday and you are unreachable: the three things they need to know.**
 1) `python run.py` rebuilds everything from five CSVs in `data/`; `tests/` must pass. 2) The message to Priya is "the bottom ten are a queue effect from Pulse 2 lots 2510-2512, don't retrain yet"; the supporting table is `out/lot_alerts.csv`. 3) Open items: a supplier claim needs Finance's real replacement counts, and the free-text rule needs a proper human-labelled sample.
 
-**11. Honest hours spent:** [ADD]
+**11. Honest hours spent:** 30
 
-**12. GitHub repo:** [ADD]
+**12. GitHub repo:** https://github.com/harshupadhyay14/Vireo-Support-Dashboard.git
